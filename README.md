@@ -15,7 +15,7 @@ Optify calls itself "inbound marketing software", which includes tools for:
 * Visitor tracking and analytics
 * Salesforce integration 
 
-See more at optify.net
+See more at [optify.net](http://optify.net)
 
 ## Installation
 
@@ -48,6 +48,6 @@ Now you can run your queries and parse the output.
 * visitor by site and id - get visitor information for a specific visitor on a specific site
 
 ## Resources
-http://help.optify.net/entries/20270158-introduction-to-optify-s-api
-http://help.optify.net/forums/20157637-api
+* http://help.optify.net/entries/20270158-introduction-to-optify-s-api
+* http://help.optify.net/forums/20157637-api
 
