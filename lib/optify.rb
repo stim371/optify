@@ -14,19 +14,19 @@ class Optify
     self.class.get(site_path, :query => clean(options)).parsed_response
   end
   
-  def site_by_id(id,options={})
-    site_path = "/v1/sites.json/#{id.to_s}"
+  def site_by_id(site_id,options={})
+    site_path = "/v1/sites/#{site_id.to_s}.json"
     self.class.get(site_path, :query => clean(options)).parsed_response
   end
 
   def visitors_by_site_id(site_id,options={})
-    path = "/v1/sites/#{site_id.to_s}/visitors.json";
-    self.class.get(path, :query => clean(options)).parsed_response
+    site_path = "/v1/sites/#{site_id.to_s}/visitors.json"
+    self.class.get(site_path, :query => clean(options)).parsed_response
   end
 
   def visitor_by_id(site_id,visitor_id,options = {})
-    path = "/v1/sites/#{site_id.to_s}/visitors/#{visitor_id.to_s}.json"
-    self.class.get(path, :query => clean(options)).parsed_response
+    site_path = "/v1/sites/#{site_id.to_s}/visitors/#{visitor_id.to_s}.json"
+    self.class.get(site_path, :query => clean(options)).parsed_response
   end
   
   def who_am_i
