@@ -1,3 +1,3 @@
 class Optify
-  VERSION = "0.0.1"
+  VERSION = "0.0.1-kjiwa"
 end
