@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.optify.net/whoami?access_token=wmjf73ott6f33unj2ztlttor
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Aug 2012 05:09:03 GMT
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! 'Ting Wang
+
+'
+    http_version: !!null 
+  recorded_at: Wed, 15 Aug 2012 05:09:03 GMT
+recorded_with: VCR 2.2.2

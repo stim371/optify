@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.optify.net/v1/sites/4854OOO0.json?access_token=wmjf73ott6f33unj2ztlttor
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Aug 2012 05:09:02 GMT
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"NetVM (Germany)","site_token":"4854OOO0","url":"http://www.netvm.de"}'
+    http_version: !!null 
+  recorded_at: Wed, 15 Aug 2012 05:09:02 GMT
+recorded_with: VCR 2.2.2

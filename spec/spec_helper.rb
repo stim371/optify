@@ -1,5 +1,7 @@
-require 'optify'
+require 'simplecov'
+SimpleCov.start
 
+require 'optify'
 require 'vcr'
 require 'webmock/rspec'
 

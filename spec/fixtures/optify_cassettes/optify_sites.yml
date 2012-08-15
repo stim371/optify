@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.optify.net/v1/sites.json?access_token=wmjf73ott6f33unj2ztlttor
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Aug 2012 05:09:01 GMT
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '[{"name":"NetVM (Germany)","site_token":"4854OOO0","url":"http://www.netvm.de"},{"name":"Marketing
+        Dashboard","site_token":"16U83LUW","url":"http://www.networktechinc.com/"},{"name":"Netzwerk
+        ","site_token":"RRPTZB0A","url":"http://www.tecchannel.de/"},{"name":"SEO
+        Dashboard","site_token":"EYNN83MD","url":"http://www.networktechinc.com/"},{"name":"Testing
+        Site 101","site_token":"XMAB8FMS","url":"http://www.optify.net"}]'
+    http_version: !!null 
+  recorded_at: Wed, 15 Aug 2012 05:09:02 GMT
+recorded_with: VCR 2.2.2

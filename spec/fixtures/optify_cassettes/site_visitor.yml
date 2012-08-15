@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.optify.net/v1/sites/UQP1WJ35/visitors/3CAD1130-b933-4b48-af79-859b89065c64.json?access_token=qbkkw3ir3gtg7bdf4rumb69p
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Aug 2012 05:09:03 GMT
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"visitor_id":"3CAD1130-b933-4b48-af79-859b89065c64","country":"US","site_token":"UQP1WJ35","hidden":false,"visits":[{"user_agent":"","visit_date":1344952742314,"keyword":null,"referral_serp_rank":null,"custom_referral_detail":null,"custom_referral_type":null,"referral_search_engine":null,"referral_type":"DIRECT","pageviews":[{"url":"http://www.networktechinc.com//search","referral_url":null,"page_title":"Search","ip_address":"64.52.115.178","date_viewed":1344952742314},{"url":"http://www.networktechinc.com//home","referral_url":null,"page_title":"Home","ip_address":"59.85.95.41","date_viewed":1344952802314},{"url":"http://www.networktechinc.com//sitemap","referral_url":null,"page_title":"Sitemap","ip_address":"70.54.34.105","date_viewed":1344952862314},{"url":"http://www.networktechinc.com//sitemap","referral_url":null,"page_title":"Sitemap","ip_address":"206.169.227.26","date_viewed":1344952862314},{"url":"http://www.networktechinc.com//search","referral_url":null,"page_title":"Search","ip_address":"63.115.172.177","date_viewed":1344952982314},{"url":"http://www.networktechinc.com//product","referral_url":null,"page_title":"Product","ip_address":"168.244.164.254","date_viewed":1344953162314}],"forms":[],"visit_id":"Y2WI8A5ITY"},{"user_agent":"","visit_date":1344988742314,"keyword":null,"referral_serp_rank":null,"custom_referral_detail":null,"custom_referral_type":null,"referral_search_engine":null,"referral_type":"DIRECT","pageviews":[{"url":"http://www.networktechinc.com//contact-us","referral_url":null,"page_title":"Contact
+        Us","ip_address":"70.54.34.105","date_viewed":1344988742314}],"forms":[],"visit_id":"NQBHNZL8A1"}],"leadScores":[{"hidden":true,"lead_score":-1.0,"previous_lead_score":-1.0,"max_lifetime_lead_score":0.0,"rule_set":"Top
+        Leads"},{"hidden":false,"lead_score":21.0,"previous_lead_score":21.0,"max_lifetime_lead_score":21.0,"rule_set":"Active
+        Visitors"}],"company_information":[{"address":"1000 Lowes Blvd","name":"Lowe''s
+        Companies, Inc.","state_province":"NC","country":"United States","city":"Mooresville","postal_code":"28117-8520","website":"www.lowes.com","revenue":48230000000,"phone_number":"+1.704.758.1000","stock_symbol":"LOW","stock_exchange":"NYSE","ownership":"Publicly
+        Traded","employee_count":157000,"employee_range":"> 100K","revenue_range":">
+        $1B","industry":"Retail","sub_industry":"Hardware and Building Material Dealers","sic_code":""}],"avg_pageviews_per_visit":3.5,"avg_visit_duration":210000,"is_lead":false,"total_page_views":7,"total_visits":2,"last_visit_date":1344988742314,"last_visit_referral_type":"DIRECT","is_isp":false,"organization_name":"Lowes
+        Companies","city":"Mooresville","state_province":"NC","postal_code":"07030","latest_form_submission":null,"default_lead_score":21.0}'
+    http_version: !!null 
+  recorded_at: Wed, 15 Aug 2012 05:09:03 GMT
+recorded_with: VCR 2.2.2

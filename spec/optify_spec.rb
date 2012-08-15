@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Optify do
+describe Optify::Client do
   
   subject { Optify.new('wmjf73ott6f33unj2ztlttor') }
   
@@ -14,56 +14,64 @@ describe Optify do
 
     describe "setup" do
       it "should have the base url set to the Optify API endpoint" do
-        Optify.base_uri.should eq "https://api.optify.net"
+        Optify::Client.base_uri.should eq "https://api.optify.net"
       end
     end    
   end
   
-  describe "#sites", :vcr => { :cassette_name => "optify_sites" } do
+  describe "#all_sites", :vcr => { :cassette_name => "optify_sites" } do
 
-    before(:each) { @sites = subject.sites }
+    let(:sites) { subject.all_sites }
 
-    it "should return some info" do
-      @sites.should_not be_nil
-    end
+    specify { sites.should_not be_nil }
     
     it "should have site details" do
-      @sites[0]["name"].should eq "NetVM (Germany)"
+      sites[0]["name"].should eq "NetVM (Germany)"
     end
   end
   
   describe "#site", :vcr => { :cassette_name => "optify_site" } do
     
-    before(:each) { @site = subject.site_by_id("4854OOO0") }
+    let(:site) { subject.site("4854OOO0") }
     
     it "should only return a single hash" do
-      @site.class.should eq Hash
+      site.class.should eq Hash
     end
     
     it "should get site info for a specific site" do
-      @site["name"].should eq "NetVM (Germany)"
+      site["name"].should eq "NetVM (Germany)"
     end
-
   end
   
-  describe "#visitors", :vcr => { :cassette_name => "site_visitors" } do
+  describe "#all_visitors", :vcr => { :cassette_name => "site_visitors" } do
     # need to get updated api content that actually has visitors
-    before(:each) { @visitors = subject.visitors_by_site_id("4854OOO0") }
-
-    it "should provide information on visitors to the site" do
-      @visitors.should_not be_nil
+    let(:visitors) { Optify.new("qbkkw3ir3gtg7bdf4rumb69p").all_visitors("UQP1WJ35") }
+    
+    specify { visitors.should_not be_empty }
+  end
+  
+  describe "#visitor", :vcr => { :cassette_name => "site_visitor" } do
+    
+    let(:visitor) { Optify.new("qbkkw3ir3gtg7bdf4rumb69p").visitor("UQP1WJ35","3CAD1130-b933-4b48-af79-859b89065c64") }
+    
+    specify { visitor.should_not be_empty }
+    
+    it "should only return a single hash" do
+      visitor.class.should be Hash
+    end
+    
+    it "should provide information on one user" do
+      visitor["visitor_id"].should eq "3CAD1130-b933-4b48-af79-859b89065c64"
+      visitor["country"].should eq "US"
+      visitor["site_token"].should eq "UQP1WJ35"
+      visitor["hidden"].should eq false
     end
   end
   
-  # describe "#visitor", :vcr => { :cassette_name => "site_visitor"  do
-  #   
-  #   before(:each) { @visitor = subject.visitor_by_id("4854OOO0",) }
-  #   
-  #   it "should only return a single hash" do
-  #     @visitor.class.should be Hash
-  #   end
-  #   
-  #   it "should provide information on a specific visitor to a site"
-  # end
-  
+  describe "#who_am_i", :vcr => { :cassette_name => "specific site visitor" } do
+    
+    it "should tell me my name" do
+      subject.who_am_i.should_not be_nil
+    end
+  end
 end
