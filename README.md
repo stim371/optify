@@ -2,6 +2,8 @@
 
 A gem providing Ruby bindings for the [Optify API](http://help.optify.net/forums/20157637-api).
 
+__NOTE:__ Optify has [shut down](http://www.geekwire.com/2013/optify-hits-wall-lays-staff/), so no further development will be completed on this library.
+
 ## What is Optify (the company)?
 
 Optify calls itself "inbound marketing software", which includes tools for:
